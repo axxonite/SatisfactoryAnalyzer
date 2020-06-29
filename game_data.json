@@ -1,0 +1,437 @@
+{
+    "recipes": [
+    {
+        "name": "Iron Ore",
+        "building": "Miner",
+        "rate": 120
+    },
+    {
+        "name": "Copper Ore",
+        "building": "Miner",
+        "rate": 120
+    },
+    {
+        "name": "Limestone",
+        "building": "Miner",
+        "rate": 120
+    },
+    {
+        "name": "Iron Ingot",
+        "building": "Smelter",
+        "rate": 30,
+        "ingredients": [
+            {
+                "name": "Iron Ore",
+                "quantity": 1
+            }
+        ],
+        "build_steps": 3
+    },
+    {
+        "name": "Copper Ingot",
+        "building": "Smelter",
+        "rate": 30,
+        "ingredients": [
+            {
+                "name": "Copper Ore",
+                "quantity": 1
+            }
+        ],
+        "build_steps": 3
+    },
+    {
+        "name": "Concrete",
+        "building": "Constructor",
+        "rate": 15,
+        "ingredients": [
+            {
+                "name": "Limestone",
+                "quantity": 3
+            }
+        ],
+        "build_steps": 2
+    },
+    {
+        "name": "Iron Plate",
+        "building": "Constructor",
+        "rate": 20,
+        "produced": 2,
+        "ingredients": [
+            {
+                "name": "Iron Ingot",
+                "quantity": 3
+            }
+        ],
+        "build_steps": 3
+    },
+    {
+        "name": "Iron Rod",
+        "building": "Constructor",
+        "rate": 15,
+        "ingredients": [
+            {
+                "name": "Iron Ingot",
+                "quantity": 1
+            }
+        ],
+        "build_steps": 1
+    },
+    {
+        "name": "Screw",
+        "building": "Constructor",
+        "rate": 40,
+        "produced": 4,
+        "ingredients": [
+            {
+                "name": "Iron Rod",
+                "quantity": 1
+            }
+        ],
+        "build_steps": 3
+    },
+    {
+        "name": "Reinforced Iron Plate",
+        "building": "Assembler",
+        "rate": 5,
+        "ingredients": [
+            {
+                "name": "Iron Plate",
+                "quantity": 16
+            },
+            {
+                "name": "Screw",
+                "quantity": 24
+            }        
+        ],
+        "build_steps": 6
+    },
+    {
+        "name": "Wire",
+        "building": "Constructor",
+        "rate": 30,
+        "produced": 2,
+        "ingredients": [
+            {
+                "name": "Copper Ingot",
+                "quantity": 1
+            }      
+        ],
+        "build_steps": 2
+    },
+    {
+        "name": "Cable",
+        "building": "Constructor",
+        "rate": 30,
+        "ingredients": [
+            {
+                "name": "Wire",
+                "quantity": 2
+            }      
+        ],
+        "build_steps": 1
+    },
+    {
+        "name": "Rotor",
+        "building": "Assembler",
+        "rate": 5,
+        "ingredients": [
+            {
+                "name": "Iron Rod",
+                "quantity": 5
+            },
+            {
+                "name": "Screw",
+                "quantity": 25
+            }       
+        ],
+        "build_steps": 6
+    }     ,
+    {
+        "name": "Smart Plating",
+        "building": "Assembler",
+        "rate": 2,
+        "ingredients": [
+            {
+                "name": "Reinforced Iron Plate",
+                "quantity": 1
+            },
+            {
+                "name": "Rotor",
+                "quantity": 1
+            }
+        ]
+    }  
+    ],
+    "buildings" : [
+        {
+            "name": "Miner",
+            "power": 5,
+            "ingredients": [
+                {
+                    "name": "Portable Miner",
+                    "quantity": 1
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity": 10
+                },
+                {
+                    "name": "Concrete",
+                    "quantity": 10
+                }
+            ]
+        },
+        {
+            "name": "Smelter",
+            "power": 4,
+            "ingredients": [
+                {
+                    "name": "Iron Rod",
+                    "quantity": 5
+                },
+                {
+                    "name": "Wire",
+                    "quantity": 8
+                }
+            ]
+        },
+        {
+            "name": "Constructor",
+            "power": 4,
+            "ingredients": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity": 2
+                },
+                {
+                    "name": "Cable",
+                    "quantity": 8
+                }
+            ]
+        },
+        {
+            "name": "Assembler",
+            "power": 15,
+            "ingredients": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity": 8
+                },
+                {
+                    "name": "Rotor",
+                    "quantity": 4
+                },
+                {
+                    "name": "Cable",
+                    "quantity": 10
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Base Building",
+            "tier": 1,
+            "requirements": [
+                {
+                    "name": "Concrete",
+                    "quantity": 200
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity": 100
+                },
+                {
+                    "name": "Iron Rod",
+                    "quantity": 100
+                }                
+            ]
+        },
+        {
+            "name": "Logistics",
+            "tier": 1,
+            "requirements": [
+                {
+                    "name": "Iron Plate",
+                    "quantity": 150
+                },
+                {
+                    "name": "Iron Rod",
+                    "quantity": 150
+                },
+                {
+                    "name": "Wire",
+                    "quantity": 300
+                }                                              
+            ]
+        },
+        {
+            "name": "Field Research",
+            "tier": 1,
+            "requirements": [
+                {
+                    "name": "Iron Plate",
+                    "quantity": 100
+                },
+                {
+                    "name": "Screw",
+                    "quantity": 300
+                },
+                {
+                    "name": "Wire",
+                    "quantity": 300
+                }                                              
+            ]
+        },
+        {
+            "name": "Part Assembly",
+            "tier": 2,
+            "requirements": [
+                {
+                    "name": "Iron Plate",
+                    "quantity": 300
+                },
+                {
+                    "name" : "Iron Rod",
+                    "quantity": 200
+                },
+                {
+                    "name": "Screw",
+                    "quantity": 500
+                },
+                {
+                    "name": "Cable",
+                    "quantity": 200
+                }                                              
+            ]
+        },
+        {
+            "name": "Obstacle Clearing",
+            "tier": 2,
+            "requirements": [
+                {
+                    "name": "Concrete",
+                    "quantity": 100
+                },
+                {
+                    "name": "Screw",
+                    "quantity": 500
+                },
+                {
+                    "name": "Cable",
+                    "quantity": 100
+                }                                              
+            ]
+        },
+        {
+            "name": "Jump Pads",
+            "tier": 2,
+            "requirements": [
+                {
+                    "name": "Rotor",
+                    "quantity": 50
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity": 300
+                },
+                {
+                    "name": "Cable",
+                    "quantity": 150
+                }                                              
+            ]
+        },          
+        {
+            "name": "Resource Sink Bonus Program",
+            "tier": 2,
+            "requirements": [
+                {
+                    "name": "Concrete",
+                    "quantity": 400
+                },
+                {
+                    "name": "Wire",
+                    "quantity": 500
+                },
+                {
+                    "name": "Iron Rod",
+                    "quantity": 200
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity": 200
+                }                                                               
+            ]
+        },     
+        {
+            "name": "Logistics Mk.2",
+            "tier": 2,
+            "requirements": [
+                {
+                    "name": "Concrete",
+                    "quantity": 200
+                },
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity": 50
+                },
+                {
+                    "name": "Iron Rod",
+                    "quantity": 300
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity": 300
+                }                                                               
+            ]
+        }   ,
+        {
+            "name": "Space Elevator",
+            "requirements": [
+                {
+                    "name": "Concrete",
+                    "quantity": 500
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity": 250
+                },
+                {
+                    "name": "Iron Rod",
+                    "quantity": 400
+                },
+                {
+                    "name": "Wire",
+                    "quantity": 1500
+                }
+            ]
+        },
+        {
+            "name": "Project Assembly Phase 1",
+            "requirements": [
+                {
+                    "name": "Smart Plating",
+                    "quantity": 50
+                }
+            ]
+        },
+        {
+            "name": "Coal Power",
+            "tier": 3,
+            "requirements": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity": 150
+                },
+                {
+                    "name": "Rotor",
+                    "quantity": 50
+                },
+                {
+                    "name": "Cable",
+                    "quantity": 300
+                }
+            ]
+        }                               
+    ]  
+  }
